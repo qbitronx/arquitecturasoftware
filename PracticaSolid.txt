@@ -1,5 +1,7 @@
+Grupo 1
 Christian Valdivia
 Jeshua Cabanillas
+
 
 Ejercicio 1: SRP
 
@@ -27,6 +29,7 @@ class LibroEnviar {
 }
 
 
+
 Ejercicio 2: OCP
 
 interface EstrategiaNotificacion {
@@ -49,6 +52,28 @@ class EnviarEmail implements EstrategiaNotificacion {
 
 Ejercicio 3: LSP
 
+class Ave {
+  public Nombre;
+}
+
+class AveVoladora extends Ave {
+    public void volar() {
+        //volar
+        System.out.println("Volando...");
+    }
+}
+
+class AveNoValadora extends Ave {
+    public void caminar() {
+        //caminar
+        System.out.println("Caminando...");
+    }
+}
+
+main () {
+ public AveNoVoladora pinguino;
+ pinguino.caminar();
+}
 
 
 
@@ -87,6 +112,8 @@ class AvionBoing737 implements Vehiculo, Aeronave {
    void detener();
    void volar();
 }
+
+
 
 Ejercicio 5: DIP 
 
