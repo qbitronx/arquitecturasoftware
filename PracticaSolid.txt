@@ -1,3 +1,103 @@
 Christian Valdivia
 Jeshua Cabanillas
 
+Ejercicio 1: SRP
+
+
+
+
+Ejercicio 2: OCP
+
+interface EstrategiaNotificacion {
+    public void enviar(String tipo, String mensaje);
+}
+
+class EnviarSMS implements EstrategiaNotificacion {
+    public void enviar(String tipo, String mensaje) {
+        //enviar SMS
+    }
+}
+
+class EnviarEmail implements EstrategiaNotificacion {
+    public void enviar(String tipo, String mensaje) {
+        //enviar EMAIL
+    }
+}
+
+
+
+Ejercicio 3: LSP
+
+
+
+
+Ejercicio 4: ISP 
+
+interface Vehiculo {
+    void arrancar();
+    void detener();
+
+interface Aeronave {
+  void volar();
+}
+
+interface Embarcacion {
+  void navegar();
+}
+
+interface Automovil {
+    void conducir();
+}
+
+class Camion implements Vehiculo, Automovil {
+   void arrancar();
+   void detener();
+   void conducir();
+}
+
+class Crucero implements Vehiculo, Embarcacion {
+   void arrancar();
+   void detener();
+   void navegar(); 
+}
+
+class AvionBoing737 implements Vehiculo, Aeronave {
+   void arrancar();
+   void detener();
+   void volar();
+}
+
+Ejercicio 5: DIP 
+
+interface Generator {
+  public void crear();
+}
+
+class PDFGenerator extends Generator{
+  public void crear() {
+    // crear pdf
+  }
+}
+
+class WordGenerator extends Generator{
+  public void crear() {
+    // crear Word
+  }
+}
+
+class ExcelGenerator extends Generator{
+  public void crear() {
+    // crear Word
+  }
+}
+
+class ReporteService {
+  private Generator generator;
+
+  public ReporteService (Generator generator) {
+    this.generator = generator;
+  }
+
+  public void generar();
+     generator.crear();
+}
