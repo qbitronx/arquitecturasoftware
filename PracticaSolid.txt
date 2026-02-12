@@ -3,7 +3,28 @@ Jeshua Cabanillas
 
 Ejercicio 1: SRP
 
+class Libro {
+    private String titulo;
+    private String autor;
+}
 
+class LibroRepository {
+    public void guardarEnArchivo(Libro libro) {
+        // Guarda en archivo
+    }
+}
+
+class LibroImprimir {
+    public void imprimirEnConsola(Libro libro) {
+        System.out.println(libro.titulo + " - " + libro.autor);
+    }
+}
+
+class LibroEnviar {
+    public void enviarPorEmail(Libro libro, String destinatario) {
+        // Envía email
+    }
+}
 
 
 Ejercicio 2: OCP
